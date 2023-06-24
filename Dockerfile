@@ -23,7 +23,8 @@ EXPOSE 3010
 COPY . /src
 
 RUN apt update -y
-RUN curl -s https://deb.nodesource.com/setup_18.x | sudo bash
+RUN apt install curl
+RUN curl -s https://deb.nodesource.com/setup_18.x | bash
 RUN apt install nodejs -y
 
 RUN npm install -g yarn
